@@ -1,33 +1,218 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Palmer";
+  src: url("./fonts/cs-palmer-font-1728057975-0/CSPalmer-Regular_demo-BF66fe02f3495e2.otf") format("opentype");
+}
+
+/* Root Color Variables for Elegant Nature Theme */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 34, 40, 49;
+  /* Deep forest green */
+  --background-start-rgb: 235, 244, 240;
+  /* Soft mint */
+  --background-end-rgb: 202, 220, 212;
+  /* Light sage */
+  --accent-rgb: 102, 129, 123;
+  /* Muted moss */
+  --highlight-rgb: 74, 105, 85;
+  /* Vibrant fern green */
+  --button-background-rgb: 126, 166, 128;
+  /* Natural, earthy green */
+  --hover-background-rgb: 83, 120, 92;
+  /* Darker forest green */
+  --headlines: "Palmer", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 235, 244, 240;
+    --background-start-rgb: 34, 40, 49;
+    --background-end-rgb: 48, 56, 66;
+    --accent-rgb: 91, 142, 125;
+    --highlight-rgb: 102, 129, 123;
+    --button-background-rgb: 126, 166, 128;
+    --hover-background-rgb: 83, 120, 92;
+
+    --headlines: "Palmer", serif;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to right, rgba(var(--background-start-rgb)), rgba(var(--background-end-rgb)));
+  color: rgba(var(--foreground-rgb));
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1,
+h2,
+h3 {
+  font-family: var(--headlines);
+}
+
+
+
+/* Header Design with Natural Flow */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background-color: rgba(var(--background-start-rgb), 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(var(--accent-rgb), 0.7);
+  backdrop-filter: blur(6px);
+}
+
+/* Logo with Elegant Typography */
+.logo h1 {
+  color: rgba(var(--highlight-rgb));
+  font-size: 2.5rem;
+  font-family: var(--headlines);
+}
+
+.highlight {
+  color: rgba(var(--accent-rgb));
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth, flowing navigation links */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fefae0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(var(--highlight-rgb));
+  transform: translateY(-3px);
+  /* Smooth upward movement on hover */
+  text-shadow: 0px 2px 5px rgba(var(--highlight-rgb), 0.4);
+  /* Light shadow for elegance */
+}
+
+/* Soft, natural button style */
+.nature-button {
+  background-color: rgba(var(--button-background-rgb));
+  color: rgba(var(--foreground-rgb));
+  border: none;
+  padding: 0.8rem 2rem;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(var(--hover-background-rgb), 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nature-button:hover {
+  background-color: rgba(var(--hover-background-rgb));
+  box-shadow: 0 6px 12px rgba(var(--hover-background-rgb), 0.5);
+}
+
+.smallerNav {
+  border-bottom: 3px solid rgba(var(--accent-rgb), 0.7);
+}
+
+/* .projectItem {
+  text-align: center;
+  list-style: none;
+  margin: 1rem ;
+  background-color: rgba(var(--highlight-rgb));
+  padding: .5rem;
+  border-radius: .4rem;
+}
+
+.projectList {
+  display: flex;
+  gap: .5rem;
+} */
+ 
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Card */
+.projectItem {
+  background: rgb(var(--background-end-rgb));
+  /* Dark card */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Title */
+.projectItem h2 {
+  font-size: 22px;
+  font-family: var(--headlines);
+  margin-bottom: 10px;
+}
+
+/* Description */
+.projectItem p {
+  font-size: 14px;
+  color: rgb(var(--accent-rgb));
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Tech List */
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.techItem {
+  background: rgba(var(--accent-rgb), 0.2);
+  color: rgb(var(--highlight-rgb));
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Visit Button */
+.visitButton {
+  display: inline-block;
+  background: rgb(var(--button-background-rgb));
+  color: rgb(var(--background-start-rgb));
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.visitButton:hover {
+  background: rgb(var(--hover-background-rgb));
 }

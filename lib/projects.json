@@ -1,0 +1,44 @@
+[
+    {
+    "name": "eCulture",
+    "description": "A full-stack cultural event registration platform with user authentication, personalized event recommendations, user profiles (including reviews, comments, likes, and event lists), and the ability to upload event photos.",
+    "technologies": ["React", "Typescript", "NextJs", "Prisma", "Postgresql", "Tailwind CSS"],
+    "link": "https://eculture.vercel.app/"
+    },
+    {
+    "name": "Movie Night Planner - Group Project",
+    "description": "Front-end website for planning movie nights. Connected to various APIs, including Google API and The Movie Database API. Pages are generated dynamically in response to user requests.",
+    "technologies": ["JavaScript", "Node.js", "Express.js", "API Integration", "HTML", "CSS"],
+    "link": "https://movie-night-planner.netlify.app/"
+    },
+    {
+    "name": "Read more Rest API",
+    "description": "RESTful API for book clubs to manage reading lists. Supports user authentication, book tracking, and club member interactions. Features include endpoints for adding, updating, and reviewing books, as well as managing user profiles and exploring reading lists.",
+    "technologies": ["JavaScript", "Node.js", "Express.js", "MongoDB"],
+    "link": "https://read-list-api.onrender.com/api-docs/"
+    },
+    {
+    "name": "Handcrafted Haven - Group Project",
+    "description": "A full-stack web store for handmade creations where artisans can add, edit, and delete products their products, share their stories, and connect with buyers. Users can browse, leave comments and create their own profiles.",
+    "technologies": ["React", "Typescript", "NextJs", "Prisma", "MongoDB"],
+    "link": "https://handcrafted-haven-azure.vercel.app/"
+    },
+    {
+    "name": "Semirary Study GraphQL API - Group Project",
+    "description": "Semirary Study API. A group project built to help seminary students learn and play with the scriptures studies. Lets users search and retrieve scriptures, manage challenges, and get quotes.",
+    "technologies": ["GraphQL","JavaScript", "Node.js", "Express.js", "MongoDB"],
+    "link": "https://seminary-study.onrender.com/graphql"
+    },
+    {
+    "name": "Sleep Outside Shopping Cart Website - Group Project",
+    "description": "An e-commerce website with a shopping cart feature. Developed using JavaScript and Node.js. Utilized modules and server-side functionality for handling shopping cart operations.",
+    "technologies": ["JavaScript", "Node.js", "Express.js", "HTML", "CSS"],
+    "link": "https://sleep-outside.netlify.app/"
+    },
+    {
+    "name": "Introduction to Front-end Portal",
+    "description": "Assignment Portal containing two static web sites and various web development activities.",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "link": "https://saraltr.github.io/wdd230/"
+    }
+]
