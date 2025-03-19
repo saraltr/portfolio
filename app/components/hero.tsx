@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import heroImage from '@/public/images/hero.png';
+import Link from "next/link";
 
 
 export default function Hero(){

@@ -216,3 +216,140 @@ h3 {
 .visitButton:hover {
   background: rgb(var(--hover-background-rgb));
 }
+
+/* Project Card */
+.details {
+  background: rgb(var(--background-end-rgb));
+  padding: 30px;
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title Styling */
+.details h2 {
+  font-size: 28px;
+  color: rgb(var(--highlight-rgb));
+  font-family: var(--headlines);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Logo Centered */
+.details>img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Company Info Section */
+.compagny {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: rgba(var(--accent-rgb), 0.2);
+  border-radius: 10px;
+}
+
+.compagny p {
+  padding: 10px;
+  background: rgba(var(--highlight-rgb), 0.15);
+  border-radius: 8px;
+  font-size: 16px;
+  color: rgb(var(--foreground-rgb));
+  text-align: center;
+}
+
+/* Process Sections */
+.process {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 6;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.step1 {
+  grid-row: 1/2;
+}
+.step2 {
+  grid-row: 1/3;
+}
+.step3 {
+  grid-row: 2/3;
+}
+
+.final {
+  display: flex;
+}
+/* Section Headers */
+.process h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.process h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: rgb(var(--highlight-rgb));
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Image Styling */
+.process img {
+  margin: 1rem auto;
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1);
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+/* Ordered Lists */
+.details ol {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: list-counter;
+  margin-top: .5rem;
+}
+
+.details ol li {
+  font-size: 16px;
+  color: rgb(var(--foreground-rgb));
+  border-radius: 8px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  counter-increment: list-counter;
+}
+
+.details ol li::before {
+  content: counter(list-counter) ".";
+  border-radius: 8px;
+  background: rgba(var(--highlight-rgb), 0.15);
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 8px 12px;
+}
+
+/* Figure Captions */
+figcaption {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  color: rgb(var(--accent-rgb));
+  font-style: italic;
+}
