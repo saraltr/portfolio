@@ -1,44 +1,76 @@
 [
-    {
+  {
+    "category": "Web Dev",
     "name": "eCulture",
     "description": "A full-stack cultural event registration platform with user authentication, personalized event recommendations, user profiles (including reviews, comments, likes, and event lists), and the ability to upload event photos.",
-    "technologies": ["React", "Typescript", "NextJs", "Prisma", "Postgresql", "Tailwind CSS"],
-    "link": "https://eculture.vercel.app/"
-    },
-    {
+    "technologies": ["React", "Typescript", "NextJs", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    "link": "https://eculture.vercel.app/",
+    "learnMore": "/projects/eculture",
+    "image": "/images/dev/eculture.png"
+  },
+  {
+    "category": "Web Dev",
+    "name": "Prosupply - Group Project",
+    "description": "A B2B supplier platform built with Blazor and .NET, featuring tiered membership access, supplier dashboards, order and quote management, and dynamic company listings. Made for small businesses, growing companies, and high-visibility suppliers.",
+    "technologies": ["Blazor", ".NET", "PostgreSQL", "Bootstrap", "HTML", "CSS"],
+    "link": "https://prosupply.azurewebsites.net/",
+    "learnMore": "/projects/prosupply",
+    "image": "/images/dev/prosupply.png"
+  },
+  {
+    "category": "Web Dev",
     "name": "Movie Night Planner - Group Project",
     "description": "Front-end website for planning movie nights. Connected to various APIs, including Google API and The Movie Database API. Pages are generated dynamically in response to user requests.",
     "technologies": ["JavaScript", "Node.js", "Express.js", "API Integration", "HTML", "CSS"],
-    "link": "https://movie-night-planner.netlify.app/"
-    },
-    {
+    "link": "https://movie-night-planner.netlify.app/",
+    "image": "/images/dev/movie-night.png"
+  },
+  {
+    "category": "Web Dev",
     "name": "Read more Rest API",
     "description": "RESTful API for book clubs to manage reading lists. Supports user authentication, book tracking, and club member interactions. Features include endpoints for adding, updating, and reviewing books, as well as managing user profiles and exploring reading lists.",
     "technologies": ["JavaScript", "Node.js", "Express.js", "MongoDB"],
-    "link": "https://read-list-api.onrender.com/api-docs/"
-    },
-    {
+    "link": "https://read-list-api.onrender.com/api-docs/",
+    "image": "/images/dev/read-more.png"
+  },
+  {
+    "category": "Web Dev",
     "name": "Handcrafted Haven - Group Project",
     "description": "A full-stack web store for handmade creations where artisans can add, edit, and delete products their products, share their stories, and connect with buyers. Users can browse, leave comments and create their own profiles.",
     "technologies": ["React", "Typescript", "NextJs", "Prisma", "MongoDB"],
-    "link": "https://handcrafted-haven-azure.vercel.app/"
-    },
-    {
+    "link": "https://handcrafted-haven-azure.vercel.app/",
+    "image": "/images/dev/handcrafted.png"
+  },
+  {
+    "category": "Web Dev",
     "name": "Semirary Study GraphQL API - Group Project",
     "description": "Semirary Study API. A group project built to help seminary students learn and play with the scriptures studies. Lets users search and retrieve scriptures, manage challenges, and get quotes.",
-    "technologies": ["GraphQL","JavaScript", "Node.js", "Express.js", "MongoDB"],
-    "link": "https://seminary-study.onrender.com/graphql"
-    },
-    {
+    "technologies": ["GraphQL", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    "link": "https://seminary-study.onrender.com/graphql",
+    "image": "/images/dev/seminary.png"
+  },
+  {
+    "category": "Web Dev",
+    "name": "Vincennes Chamber of Commerce",
+    "description": "This project represents a static website developed as part of a foundational web development and design course. The site serves as a digital platform for the Chamber of Commerce, featuring listing of businesses in the city, basic form control, pop-ups, and integration with an external API for real-time data.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "link": "https://saraltr.github.io/wdd230/chamber/index.html",
+    "image": "/images/dev/chamber.png"
+  },
+  {
+    "category": "Web Dev",
     "name": "Sleep Outside Shopping Cart Website - Group Project",
     "description": "An e-commerce website with a shopping cart feature. Developed using JavaScript and Node.js. Utilized modules and server-side functionality for handling shopping cart operations.",
     "technologies": ["JavaScript", "Node.js", "Express.js", "HTML", "CSS"],
-    "link": "https://sleep-outside.netlify.app/"
-    },
-    {
-    "name": "Introduction to Front-end Portal",
-    "description": "Assignment Portal containing two static web sites and various web development activities.",
-    "technologies": ["JavaScript", "HTML", "CSS"],
-    "link": "https://saraltr.github.io/wdd230/"
-    }
+    "link": "https://sleep-outside.netlify.app/",
+    "image": "/images/dev/sleep-outside.png"
+  },
+  {
+  "category": "Web Dev",
+  "name": "Bountiful Foods",
+  "description": "This project showcases a static website developed for Bountiful Foods, a juice company. It includes a dynamic product catalog, an interactive Drink Builder, and order placement functionality.",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "link": "https://saraltr.github.io/wdd230/bountiful_foods/index.html",
+  "image": "/images/dev/bountiful-foods.png"
+  }
 ]

@@ -1,102 +1,71 @@
-"use client"
-import {useState} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
+export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-
-function Nav() {
-    return (
-        <div className="header">
-        <div className="logo m-2">
-                <h1 className="nature-logo">Sara<span className="highlight">Designs</span></h1>
-          </div>
-        <nav className="nav">
-            <ul className="nav-links">
-            <li><Link href="/">Home</Link></li>
-            <li><a href="#about">About</a></li>
-            <li><Link href="/projects">Projects</Link></li>
-            </ul>
-        </nav>
-        <div className="cta-container">
-            <button className="nature-button">Contact</button>
-            <div className="cta-decoration"></div>
+  return (
+    <div className="border border-[#7d4f50] bg-[#2b2724] rounded-t-xl shadow-[0_4px_12px_rgba(0,0,0,0.4)] mx-4 mt-4">
+      {/* Header bar */}
+      <div className="flex items-center justify-between px-4 py-2 bg-[#1d1a1a] rounded-t-xl border-b border-[#7d4f50]">
+        <div className="flex gap-2">
+          <div className="w-3 h-3 bg-[#e8bcb9] rounded-full" />
+          <div className="w-3 h-3 bg-[#7EA680] rounded-full" />
+          <div className="w-3 h-3 bg-[#7d4f50] rounded-full" />
         </div>
-    </div>
-    );
-}
+        <div className="text-[#d8cfc4] font-y2k tracking-wider">SaraDesigns</div>
 
-function SmallNav() {
-  const [isNavVisible, setIsNavVisible] = useState(false);
+        {/* Mobile menu toggle */}
+        <button
+          className="md:hidden text-[#e8bcb9] text-xl"
+          onClick={toggleMenu}
+        >
+          <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
+        </button>
 
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  };
-
-  return (
-    <>
-      <div className="logo m-2 flex items-center justify-between cursor-pointer relative">
-        <h1 className="nature-logo ">
-          Sara<span className="highlight">Designs</span>
-        </h1>
-
-        <FontAwesomeIcon
-          icon={isNavVisible ? faXmark : faBars}
-          style={{
-            height: '2rem',
-            color: isNavVisible ? '#fefae0' : 'rgba(var(--highlight-rgb))',
-            transition: 'transform 0.3s ease, color 0.3s ease',
-          }}
-          onClick={toggleNav}
-          className={`hover:text-highlight z-50 ${
-            isNavVisible ? 'rotate-45' : 'rotate-0'
-          }`}
-        />
+        {/* Filler for spacing */}
+        <div className="opacity-0 hidden md:block">_</div>
       </div>
 
+      {/* Mobile & Desktop Navigation */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
-          isNavVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={toggleNav} // Close the nav when clicking outside the menu
-      ></div>
-
-      <nav
-        className={`fixed top-0 right-0 h-full w-2/3 max-w-xs bg-[#4a6955] shadow-lg transform transition-transform duration-500 ease-in-out ${
-          isNavVisible ? 'translate-x-0' : 'translate-x-full'
-        } z-40`}
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } md:flex items-center justify-between px-6 py-4`}
       >
-        <ul className="z-10 flex flex-col justify-center h-full text-center space-y-8">
-          <li className="text-lg text-[#fefae0] font-semibold transform transition duration-500 ease-in-out hover:translate-x-2">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="text-lg text-[#fefae0] font-semibold transform transition duration-500 ease-in-out hover:translate-x-2">
-            <a href="#about">About</a>
-          </li>
-          <li className="text-lg text-[#fefae0] font-semibold transform transition duration-500 ease-in-out hover:translate-x-2">
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className="text-lg text-[#fefae0] font-semibold transform transition duration-500 ease-in-out hover:translate-x-2">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </>
+        <nav className="w-full">
+          <ul className="text-center md:flex md:gap-6 text-[#e8bcb9] font-medium font-y2k">
+            <li className="my-2 md:my-0 md:hover:bg-[#2b2724] md:hover:text-[#7EA680] transition-all">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="my-2 md:my-0 md:hover:bg-[#2b2724] md:hover:text-[#7EA680] transition-all">
+              <Link href="">About</Link>
+            </li>
+            <li className="my-2 md:my-0 md:hover:bg-[#2b2724] md:hover:text-[#7EA680] transition-all">
+              <Link href="/projects/web-dev">Web Dev Projects</Link>
+            </li>
+            <li className="my-2 md:my-0 md:hover:bg-[#2b2724] md:hover:text-[#7EA680] transition-all">
+              <Link href="/projects/design">Graphic Design Projects</Link>
+            </li>
+
+            <li className="my-4 md:hidden hover:bg-[#2b2724]">
+              <button className="bg-[#7EA680] text-[#2b2724] px-4 py-2 rounded border border-[#e8bcb9] shadow-[2px_2px_0px_#e8bcb9] hover:shadow-[4px_4px_0px_#e8bcb9] transition-all">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="hidden md:block">
+          <button className="bg-[#7EA680] text-[#2b2724] px-4 py-2 rounded border border-[#e8bcb9] shadow-[2px_2px_0px_#e8bcb9] hover:shadow-[4px_4px_0px_#e8bcb9] transition-all">
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
-
-const Header: React.FC = () => {
-  return (
-    <header>
-      <div className="lg:hidden smallerNav">
-        <SmallNav />
-      </div>
-      <div className="hidden lg:block">
-        <Nav />
-      </div>
-    </header>
-  );
-};
-
-export default Header;
