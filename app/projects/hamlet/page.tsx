@@ -143,7 +143,7 @@ export default function Hamlet() {
               <h4 className="text-[#e8bcb9] font-semibold text-lg mb-4">
                 My Picks:
               </h4>
-              <ol className="list-decimal pl-5 space-y-4 text-sm leading-relaxed">
+              <ol className="list-decimal pl-5 space-y-4 text-sm leading-relaxed text-[#f0e2d0]">
                 <li>
                   My first poster features crossed blades combined with puppet
                   strings. It highlights themes of control and corruption, with
