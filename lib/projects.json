@@ -3,7 +3,14 @@
     "category": "Web Dev",
     "name": "eCulture",
     "description": "A full-stack cultural event registration platform with user authentication, personalized event recommendations, user profiles (including reviews, comments, likes, and event lists), and the ability to upload event photos.",
-    "technologies": ["React", "Typescript", "NextJs", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    "technologies": [
+      "React",
+      "Typescript",
+      "NextJs",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ],
     "link": "https://eculture.vercel.app/",
     "learnMore": "/projects/eculture",
     "image": "/images/dev/eculture.png"
@@ -12,7 +19,14 @@
     "category": "Web Dev",
     "name": "Prosupply - Group Project",
     "description": "A B2B supplier platform built with Blazor and .NET, featuring tiered membership access, supplier dashboards, order and quote management, and dynamic company listings. Made for small businesses, growing companies, and high-visibility suppliers.",
-    "technologies": ["Blazor", ".NET", "PostgreSQL", "Bootstrap", "HTML", "CSS"],
+    "technologies": [
+      "Blazor",
+      ".NET",
+      "PostgreSQL",
+      "Bootstrap",
+      "HTML",
+      "CSS"
+    ],
     "link": "https://prosupply.azurewebsites.net/",
     "learnMore": "/projects/prosupply",
     "image": "/images/dev/prosupply.png"
@@ -21,7 +35,14 @@
     "category": "Web Dev",
     "name": "Movie Night Planner - Group Project",
     "description": "Front-end website for planning movie nights. Connected to various APIs, including Google API and The Movie Database API. Pages are generated dynamically in response to user requests.",
-    "technologies": ["JavaScript", "Node.js", "Express.js", "API Integration", "HTML", "CSS"],
+    "technologies": [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "API Integration",
+      "HTML",
+      "CSS"
+    ],
     "link": "https://movie-night-planner.netlify.app/",
     "image": "/images/dev/movie-night.png"
   },
@@ -45,7 +66,13 @@
     "category": "Web Dev",
     "name": "Semirary Study GraphQL API - Group Project",
     "description": "Semirary Study API. A group project built to help seminary students learn and play with the scriptures studies. Lets users search and retrieve scriptures, manage challenges, and get quotes.",
-    "technologies": ["GraphQL", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    "technologies": [
+      "GraphQL",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
     "link": "https://seminary-study.onrender.com/graphql",
     "image": "/images/dev/seminary.png"
   },
@@ -66,11 +93,11 @@
     "image": "/images/dev/sleep-outside.png"
   },
   {
-  "category": "Web Dev",
-  "name": "Bountiful Foods",
-  "description": "This project showcases a static website developed for Bountiful Foods, a juice company. It includes a dynamic product catalog, an interactive Drink Builder, and order placement functionality.",
-  "technologies": ["HTML", "CSS", "JavaScript"],
-  "link": "https://saraltr.github.io/wdd230/bountiful_foods/index.html",
-  "image": "/images/dev/bountiful-foods.png"
+    "category": "Web Dev",
+    "name": "Bountiful Foods",
+    "description": "This project showcases a static website developed for Bountiful Foods, a juice company. It includes a dynamic product catalog, an interactive Drink Builder, and order placement functionality.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "link": "https://saraltr.github.io/wdd230/bountiful_foods/index.html",
+    "image": "/images/dev/bountiful-foods.png"
   }
 ]

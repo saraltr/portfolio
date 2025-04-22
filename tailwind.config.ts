@@ -14,16 +14,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
-        'slide-in': {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0)' },
+        "slide-in": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
       animation: {
-        'slide-in': 'slide-in 0.5s ease-out',
+        "slide-in": "slide-in 0.5s ease-out",
       },
     },
   },
-  plugins: [require('daisyui')],
+  plugins: [require("daisyui")],
 };
 export default config;

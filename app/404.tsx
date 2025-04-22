@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
+import Link from "next/link";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Not Found",
-    description: "Eculture not found page",
+  title: "Not Found",
+  description: "Eculture not found page",
 };
- 
+
 export default function NotFound() {
   return (
     <section className="flex m-4 h-full flex-col items-center justify-center gap-2">

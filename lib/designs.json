@@ -1,19 +1,18 @@
 [
-    {
-        "id": 1,
-        "link": "blossom",
-        "name": "Blossom Delight Logo",
-        "description": "Pastry Shop Shop Logo.",
-        "category": "Graphic Design",
-        "image": "/images/graphics/blossom/final_logo.png"
-
-    },
-    {
-        "id": 2,
-        "link": "hamlet",
-        "name": "Hamlet Posters",
-        "description": "Hamlet Play Symbols & Typography Posters",
-        "category": "Graphic Design",
-        "image": "/images/graphics/hamlet/cover.png"
-    }
+  {
+    "id": 1,
+    "link": "blossom",
+    "name": "Blossom Delight Logo",
+    "description": "Pastry Shop Shop Logo.",
+    "category": "Graphic Design",
+    "image": "/images/graphics/blossom/final_logo.png"
+  },
+  {
+    "id": 2,
+    "link": "hamlet",
+    "name": "Hamlet Posters",
+    "description": "Hamlet Play Symbols & Typography Posters",
+    "category": "Graphic Design",
+    "image": "/images/graphics/hamlet/cover.png"
+  }
 ]

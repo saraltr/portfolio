@@ -9,39 +9,46 @@ const WebDevProjects = () => {
   const [page, setPage] = useState(1);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
 
-  const webDevProjects = data.filter(project => project.category === "Web Dev");
+  const webDevProjects = data.filter(
+    (project) => project.category === "Web Dev",
+  );
 
   // extract all technologies from Web Dev projects
   const allTechnologies = Array.from(
-    new Set(webDevProjects.flatMap(project => project.technologies))
+    new Set(webDevProjects.flatMap((project) => project.technologies)),
   );
 
   // apply technology filter if one is selected
   const filteredProjects = selectedTech
-    ? webDevProjects.filter(project =>
-        project.technologies.includes(selectedTech) &&
-        (project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          project.description.toLowerCase().includes(searchTerm.toLowerCase()))
+    ? webDevProjects.filter(
+        (project) =>
+          project.technologies.includes(selectedTech) &&
+          (project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            project.description
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())),
       )
-    : webDevProjects.filter(project =>
-        project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    : webDevProjects.filter(
+        (project) =>
+          project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          project.description.toLowerCase().includes(searchTerm.toLowerCase()),
       );
 
   const projectsPerPage = 6;
   const currentProjects = filteredProjects.slice(
     (page - 1) * projectsPerPage,
-    page * projectsPerPage
+    page * projectsPerPage,
   );
 
   // calculate total pages
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
-
   return (
     <section className="mx-4 border border-[#7d4f50] project-page">
       <div className="filter-dev text-center">
-        <label htmlFor="search-project" className="sr-only">Search</label>
+        <label htmlFor="search-project" className="sr-only">
+          Search
+        </label>
         <input
           id="search-project"
           type="text"
@@ -68,7 +75,7 @@ const WebDevProjects = () => {
 
       <div className="projectList">
         {currentProjects.map((item, index) => (
-          <div className="projectItem card" key={index}>
+          <div className="projectItem card text-white" key={index}>
             <figure>
               <img
                 src={item.image}
@@ -96,7 +103,7 @@ const WebDevProjects = () => {
                 className="visitButton text-[#2b2724] bg-[#7EA680] hover:bg-[#98caa0]  px-4 py-2 rounded border border-[#e8bcb9] shadow-[2px_2px_0px_#e8bcb9] hover:shadow-[4px_4px_0px_#e8bcb9] transition-all"
               >
                 Visit
-              </a>           
+              </a>
               {item.learnMore && (
                 <a
                   target="_blank"
@@ -132,7 +139,6 @@ const WebDevProjects = () => {
           Next
         </button>
       </div>
-
     </section>
   );
 };

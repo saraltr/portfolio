@@ -6,59 +6,45 @@
 
 @font-face {
   font-family: "Palmer";
-  src: url("./fonts/cs-palmer-font-1728057975-0/CSPalmer-Regular_demo-BF66fe02f3495e2.otf") format("opentype");
+  src: url("./fonts/cs-palmer-font-1728057975-0/CSPalmer-Regular_demo-BF66fe02f3495e2.otf")
+    format("opentype");
 }
 
-/* Root Color Variables for Elegant Nature Theme */
 :root {
-  --foreground: #7d4f50;
-  --background-start: #f9eae1;
-  --background-end: #cc8b86;
+  --foreground: #f9eae1;
+  --background-start: #2a2a2a;
+  --background-end: #1a1a1a;
   --accent: #aaaf8d;
-  --highlight: #4A6955;
-  --button-background: #7EA680;
+  --highlight: #4a6955;
+  --button-background: #7ea680;
   --hover-background: #5b5051;
+  --grid-line: rgba(255, 255, 255, 0.196);
   --headlines: "Palmer", serif;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #eae0d5;
-    --background-start: #0a0908;
-    --background-end: #1b3846;
-    --accent: #c6ac8f;
-    --highlight: #5e503f;
-    --button-background: #7ea680;
-    --hover-background: #53785c;
-
-    --headlines: "Palmer", serif;
-  }
-} */
-
 html {
   background-image:
-    linear-gradient(to right, var(--background-start), var(--background-end)),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 24px,
-      rgba(255, 255, 255, 0.715) 25px
+      var(--grid-line) 25px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 24px,
-      rgba(255, 255, 255, 0.801) 25px
-    );
-  background-blend-mode: overlay;
-  color: var(--foreground-rgb);
-  font-family: 'Playfair Display', serif;
+      var(--grid-line) 25px
+    ),
+    linear-gradient(to right, var(--background-start), var(--background-end));
+  background-color: var(--background-start);
+  color: var(--foreground);
+  font-family: "Playfair Display", serif;
 }
 
 .main {
   background: linear-gradient(to bottom, #cb918db2, #ce9f9baf);
 }
-
 
 h1,
 h2,
@@ -70,19 +56,19 @@ h3 {
   display: inline-block;
   padding: 1rem;
   background-color: #2b2724;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 nav ul li {
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 nav ul li:hover {
   background-color: #e8bcb9;
   color: #2b2724;
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .header {
@@ -102,6 +88,10 @@ nav ul li:hover {
   font-family: var(--headlines);
 }
 
+.pixel {
+  width: 10%;
+}
+
 .highlight {
   color: rgba(var(--accent));
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -115,8 +105,10 @@ nav ul li:hover {
   color: #fefae0;
   text-decoration: none;
   font-size: 1.1rem;
-  font-family: 'Montserrat', sans-serif;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -130,12 +122,14 @@ nav ul li:hover {
   color: rgba(var(--foreground));
   border: none;
   padding: 0.8rem 2rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--hover-background);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .nature-button:hover {
@@ -147,17 +141,16 @@ nav ul li:hover {
   border-bottom: 3px solid rgba(var(--accent), 0.7);
 }
 
-
 /* dev page */
 .filter-dev {
   background-color: #2b2724;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .project-page {
-   background: linear-gradient(to bottom, #cb918db2, #ce9f9baf);
+  background: linear-gradient(to bottom, #cb918db2, #ce9f9baf);
 }
- 
+
 .projectList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -182,7 +175,9 @@ nav ul li:hover {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   background-color: #2b2724ab;
 }
 
@@ -229,7 +224,7 @@ nav ul li:hover {
   display: inline-block;
   font-weight: bold;
   transition: background 0.3s ease;
-  margin: .4rem;
+  margin: 0.4rem;
 }
 
 .visitButton:hover {
@@ -259,7 +254,7 @@ nav ul li:hover {
 }
 
 /* Logo Centered */
-.details>img {
+.details > img {
   display: block;
   margin: 0 auto;
   border-radius: 12px;
@@ -287,11 +282,10 @@ nav ul li:hover {
 
 /* Process Sections */
 
-
 .step4 {
   background-color: var(--background-start);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* Section Headers */
@@ -331,7 +325,7 @@ nav ul li:hover {
   flex-direction: column;
   gap: 10px;
   counter-reset: list-counter;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .details ol li {
@@ -363,7 +357,7 @@ figcaption {
 
 /* Filter button styles */
 .filter-button {
-  background-color: #7EA680;
+  background-color: #7ea680;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -383,7 +377,7 @@ figcaption {
 
 /* See More button styles */
 .see-more-button {
-  background-color: #7EA680;
+  background-color: #7ea680;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -397,7 +391,8 @@ figcaption {
   background-color: #4e8a4b;
 }
 
-.btn-outline:hover, .btn-secondary:hover {
+.btn-outline:hover,
+.btn-secondary:hover {
   color: var(--background-start);
   background-color: var(--foreground);
 }

@@ -17,7 +17,9 @@ export default function Nav() {
           <div className="w-3 h-3 bg-[#7EA680] rounded-full" />
           <div className="w-3 h-3 bg-[#7d4f50] rounded-full" />
         </div>
-        <div className="text-[#d8cfc4] font-y2k tracking-wider">SaraDesigns</div>
+        <div className="text-[#d8cfc4] font-y2k tracking-wider">
+          <Link href="/">SaraDesigns</Link>
+        </div>
 
         {/* Mobile menu toggle */}
         <button

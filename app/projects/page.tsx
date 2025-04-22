@@ -9,33 +9,34 @@ const Projects = () => {
   const [designs, setDesigns] = useState(desingData);
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
-  const filteredDesigns = activeCategory === "All" 
-    ? designs 
-    : designs.filter(design => design.category === activeCategory);
+  const filteredDesigns =
+    activeCategory === "All"
+      ? designs
+      : designs.filter((design) => design.category === activeCategory);
 
   return (
     <>
       <section className="mx-4 border border-[#7d4f50] project-page">
-
         {/* Category filters */}
         <div className="category-filter mb-6 text-center mt-5">
-          <button 
+          <button
             onClick={() => setActiveCategory("All")}
             className={`btn btn-outline mx-2 ${activeCategory === "All" ? "bg-gray-100 text-[#7d4f50]" : "text-gray-500"}`}
           >
             All Projects
           </button>
-          <button 
+          <button
             onClick={() => setActiveCategory("Web Dev")}
             className={`btn btn-outline btn-secondary mx-2 ${activeCategory === "Web Dev" ? "bg-gray-200 text-gray-800" : "text-gray-500"}`}
           >
             Web Dev Projects
           </button>
-          <button 
+          <button
             onClick={() => setActiveCategory("Graphic Design")}
             className={`btn btn-outline btn-secondary mx-2 ${activeCategory === "Graphic Design" ? "bg-gray-200 text-gray-800" : "text-gray-500"}`}
           >
@@ -43,8 +44,6 @@ const Projects = () => {
           </button>
         </div>
 
-
-        
         {/* Web Dev Projects */}
         <div className="projectList">
           {filteredProjects.map((item, index) => (
@@ -53,10 +52,14 @@ const Projects = () => {
               <p>{item.description}</p>
               <ul className="techList">
                 {item.technologies.map((tech, i) => (
-                  <li key={i} className="techItem">{tech}</li>
+                  <li key={i} className="techItem">
+                    {tech}
+                  </li>
                 ))}
               </ul>
-              <a target="_blank" href={item.link} className="visitButton">Visit</a>
+              <a target="_blank" href={item.link} className="visitButton">
+                Visit
+              </a>
             </div>
           ))}
         </div>
@@ -82,13 +85,17 @@ const Projects = () => {
 
         {activeCategory === "Web Dev" && (
           <Link href="/projects/web-dev">
-            <button className="see-more-button">See More Web Dev Projects</button>
+            <button className="see-more-button">
+              See More Web Dev Projects
+            </button>
           </Link>
         )}
 
         {activeCategory === "Graphic Design" && (
           <Link href="/projects/design">
-            <button className="see-more-button">See More Graphic Design Projects</button>
+            <button className="see-more-button">
+              See More Graphic Design Projects
+            </button>
           </Link>
         )}
       </section>
