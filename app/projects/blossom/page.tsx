@@ -10,20 +10,21 @@ export const metadata: Metadata = {
 const ProjectDetails = () => {
   return (
     <>
-      <section className="logoProjectContainer mx-4 bg-[#2b2724] text-[#e8bcb9] rounded-b-xl ">
+      <section className="logoProjectContainer mx-4 rounded-b-xl ">
         {details.map((item, index) => (
           <div className="details" key={index}>
-            <h2 className="text-2xl font-bold mb-4 text-[#7EA680] underline underline-offset-4 decoration-dotted decoration-[#e8bcb9]">
+            <h2 className="text-2xl font-bold mb-4 underline underline-offset-4 decoration-dotted decoration-[#6a74d9]">
               {item.CompanyName} logo
             </h2>
 
-            <div className="card lg:card-side bg-[#f9eae1] text-[#2b2724] shadow-sm m-auto">
+            <div className="card lg:card-side bg-[#1a1d2d] text-[#e6e6f2] shadow-sm w-3/4 mx-auto w-full">
               <figure>
                 <Image
                   src={item.finalLogo}
                   width={270}
                   height={100}
                   alt="final logo"
+                  className="my-5"
                 />
               </figure>
               <div className="card-body">
@@ -38,10 +39,10 @@ const ProjectDetails = () => {
 
             <div className="process mt-6">
               <div className="step1">
-                <h3 className="text-xl font-semibold text-[#7EA680] mt-6 mb-2 border-l-4 border-[#e8bcb9] pl-2">
+                <h3 className="text-xl font-semibold text-[#e6e6f2] mt-6 mb-2 border-l-4 border-[#e6e6f2] pl-2">
                   <strong>Step 1:</strong> Visual Research
                 </h3>
-                <p className=" text-[#d8cfc4] leading-relaxed">
+                <p className=" text-[#F8F8F8] leading-relaxed">
                   Exploring industry trends, competitor branding, and visual
                   elements to establish a strong design direction.
                 </p>
@@ -74,10 +75,10 @@ const ProjectDetails = () => {
               </div>
 
               <div className="step2">
-                <h3 className="text-2xl font-bold text-[#7EA680] mb-3 border-l-4 border-[#e8bcb9] pl-3">
+                <h3 className="text-2xl font-bold text-[#e6e6f2] mb-3 border-l-4 border-[#e6e6f2] pl-3">
                   Step 2: Symbol Sketches
                 </h3>
-                <p className="text-sm text-[#d8cfc4] leading-relaxed mb-6 max-w-3xl">
+                <p className="text-sm text-[#F8F8F8] leading-relaxed mb-6 max-w-3xl">
                   Exploring different symbols that visually represent the
                   brand’s identity, values, and uniqueness.
                 </p>
@@ -109,25 +110,25 @@ const ProjectDetails = () => {
                   </figure>
                 </div>
 
-                <div className="bg-[#3a3533] rounded-lg p-4 shadow-inner border border-[#4e4744] mb-4">
-                  <h4 className="text-[#e8bcb9] font-semibold mb-2">
+                <div className="bg-[#36448C] rounded-lg p-4 shadow-inner border border-[#4e4744] mb-4">
+                  <h4 className="text-[#e6e6f2] font-semibold mb-2">
                     Design Directions:
                   </h4>
-                  <ol className="list-decimal list text-[#f0e2d0]">
+                  <ol className="list-decimal list text-[#e6e6f2]">
                     <li className="list-row">{item["direction 1"]}</li>
                     <li className="list-row">{item["direction 2"]}</li>
                     <li className="list-row">{item["direction 3"]}</li>
                   </ol>
                 </div>
 
-                <div role="alert" className="bg-[#f9eae1] alert text-[#4A6955]">
+                <div role="alert" className="bg-[#e6e6f2] alert text-[#1a1d2d]">
                   <strong className="">Next Steps:</strong> Evaluating the most
                   effective symbol for refinement and digitization.
                 </div>
               </div>
 
               <div className="step3 my-5">
-                <h3 className="text-xl font-semibold text-[#7EA680] mt-6 mb-2 border-l-4 border-[#e8bcb9] pl-2">
+                <h3 className="text-xl font-semibold text-[#e6e6f2] mt-6 mb-2 border-l-4 border-[#e6e6f2] pl-2">
                   Step 3: Digitized logos:
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6 items-start mb-6">
@@ -157,11 +158,11 @@ const ProjectDetails = () => {
                   </figure>
                 </div>
 
-                <div className="bg-[#3a3533] rounded-lg p-4 shadow-inner border border-[#4e4744] mb-4">
-                  <h4 className="text-[#e8bcb9] font-semibold mb-2">
+                <div className="bg-[#36448C] rounded-lg p-4 shadow-inner border border-[#4e4744] mb-4">
+                  <h4 className="text-[#e6e6f2] font-semibold mb-2">
                     Design Direction:
                   </h4>
-                  <ol className="list-decimal list text-[#f0e2d0]">
+                  <ol className="list-decimal list text-[#e6e6f2]">
                     <li className="list-row">{item["first logo"]}</li>
                     <li className="list-row">{item["second logo"]}</li>
                     <li className="list-row">{item["third logo"]}</li>
@@ -170,7 +171,7 @@ const ProjectDetails = () => {
               </div>
 
               <div className="step4">
-                <h3 className="text-xl font-semibold mb-4 border-l-4 border-[#4A6955] text-[#4A6955] pl-2">
+                <h3 className="text-xl font-semibold mb-4 border-l-4 border-[#5b6bc0] text-[#1a1d2d] pl-2">
                   Step 4: Type & Color Variations Explorations
                 </h3>
 
@@ -184,17 +185,17 @@ const ProjectDetails = () => {
                         alt="Typography and color explorations"
                         className="rounded border border-[#7d4f50] shadow-md"
                       />
-                      <figcaption className="text-xs text-[#aaa] mt-1 italic text-center">
+                      <figcaption className="text-xs text-[#1a1d2d] mt-1 italic text-center">
                         Explorations of typography, color schemes & variants
                       </figcaption>
                     </figure>
                   </div>
 
-                  <div className="md:col-span-2 bg-[#3a3533] rounded-lg p-4 shadow-inner border border-[#4e4744] mt-4">
-                    <h4 className="text-[#e8bcb9] font-semibold mb-2">
+                  <div className="md:col-span-2 bg-[#36448C] rounded-lg p-4 shadow-inner border border-[#4e4744] mt-4">
+                    <h4 className="text-[#e6e6f2] font-semibold mb-2">
                       Creative Focus Points:
                     </h4>
-                    <ol className="list-decimal ml-5 mt-2 text-sm space-y-2 text-[#f0e2d0]">
+                    <ol className="list-decimal ml-5 mt-2 text-sm space-y-2 text-[#e6e6f2]">
                       <li>
                         Experiment with different typefaces to match brand
                         personality
@@ -209,16 +210,16 @@ const ProjectDetails = () => {
               </div>
 
               <div className="step5 my-6">
-                <h3 className="text-xl font-semibold text-[#7EA680] mb-4 border-l-4 border-[#e8bcb9] pl-2">
+                <h3 className="text-xl font-semibold text-[#e6e6f2] mb-4 border-l-4 border-[#e6e6f2] pl-2">
                   Step 5: Final Directions
                 </h3>
 
                 <div className="flex flex-col md:flex-row md:items-start md:gap-6">
-                  <div className="md:w-1/2 bg-[#3a3533] rounded-lg p-4 shadow-inner border border-[#4e4744] mt-4">
-                    <h4 className="text-[#e8bcb9] font-semibold mb-2">
+                  <div className="md:w-1/2 bg-[#36448C] rounded-lg p-4 shadow-inner border border-[#4e4744] mt-4">
+                    <h4 className="text-[#e6e6f2] font-semibold mb-2">
                       Summary of Revisions:
                     </h4>
-                    <ol className="list-decimal ml-5 mt-2 text-sm space-y-2 text-[#f0e2d0]">
+                    <ol className="list-decimal ml-5 mt-2 text-sm space-y-2 text-[#e6e6f2]">
                       <li>{item["1st version"]}</li>
                       <li>{item["2nd version"]}</li>
                       <li>{item["3rd version"]}</li>
@@ -243,7 +244,7 @@ const ProjectDetails = () => {
               </div>
 
               <div className="final mt-6 border-t border-dotted border-[#7d4f50] pt-4">
-                <h3 className="text-xl font-semibold text-[#7EA680] mb-2">
+                <h3 className="text-xl font-semibold text-[#e6e6f2] mb-2">
                   ✦ Final Signature ✦
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6 items-start mb-6">
@@ -272,7 +273,7 @@ const ProjectDetails = () => {
                     </figcaption>
                   </figure>
                 </div>
-                <p className="text-center text-[#f0e2d0] mt-6 max-w-xl mx-auto leading-relaxed">
+                <p className="text-center text-[#e6e6f2] mt-6 max-w-xl mx-auto leading-relaxed">
                   This final identity captures the brand’s essence, balances
                   function with personality, and is ready for real-world
                   application across digital and print mediums.

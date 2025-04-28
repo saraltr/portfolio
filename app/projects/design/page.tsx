@@ -31,11 +31,10 @@ const GraphicDesignProjects = () => {
               <h2>{item.name}</h2>
               <p>{item.description}</p>
               <div className="text-center mt-4 flex justify-center gap 2">
-                <Link
-                  href={`/projects/${item.link}`}
-                  className="visitButton text-[#2b2724] bg-[#7EA680] hover:bg-[#98caa0] btn px-4 py-2 rounded border border-[#e8bcb9] shadow-[2px_2px_0px_#e8bcb9] hover:shadow-[4px_4px_0px_#e8bcb9] transition-all"
-                >
-                  <button>View Details</button>
+                <Link href={`/projects/${item.link}`}>
+                  <button className="bg-[#252E93] text-white px-4 py-2 rounded border border-[#8c8edf] shadow-[2px_2px_0px_#8c8edf] hover:shadow-[4px_4px_0px_#8c8edf] transition-all">
+                    View Details
+                  </button>
                 </Link>
               </div>
             </div>

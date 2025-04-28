@@ -11,14 +11,14 @@
 }
 
 :root {
-  --foreground: #f9eae1;
-  --background-start: #2a2a2a;
-  --background-end: #1a1a1a;
-  --accent: #aaaf8d;
-  --highlight: #4a6955;
-  --button-background: #7ea680;
-  --hover-background: #5b5051;
-  --grid-line: rgba(255, 255, 255, 0.196);
+  --foreground: #e6e6f2;
+  --background-start: #23263a;
+  --background-end: #1a1d2d;
+  --accent: #8c8edf;
+  --highlight: #5b6bc0;
+  --button-background: #6a74d9;
+  --hover-background: #4b4f77;
+  --grid-line: rgba(255, 255, 255, 0.15);
   --headlines: "Palmer", serif;
 }
 
@@ -43,7 +43,7 @@ html {
 }
 
 .main {
-  background: linear-gradient(to bottom, #cb918db2, #ce9f9baf);
+  background: linear-gradient(to bottom, #6a74d9b2, #8c8edfaf);
 }
 
 h1,
@@ -65,8 +65,8 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: #e8bcb9;
-  color: #2b2724;
+  background-color: #252E93;
+  color: var(--foreground);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -143,12 +143,12 @@ nav ul li:hover {
 
 /* dev page */
 .filter-dev {
-  background-color: #2b2724;
+  background-color: #1f2235; /* dark blue background */
   padding: 0.5rem;
 }
 
 .project-page {
-  background: linear-gradient(to bottom, #cb918db2, #ce9f9baf);
+  background: linear-gradient(to bottom, #5b6bc0b2, #7c83dbaf);
 }
 
 .projectList {
@@ -156,8 +156,11 @@ nav ul li:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1500px;
   margin: auto;
+}
+
+.design-list {
+  max-width: 1200px;
 }
 
 .projectList .design-list {
@@ -174,29 +177,30 @@ nav ul li:hover {
 .projectItem {
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  background-color: #252849cc;
+  box-shadow: 0px 4px 10px rgba(91, 107, 192, 0.2);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  background-color: #2b2724ab;
 }
 
 .projectItem:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 6px 15px rgba(91, 107, 192, 0.4);
 }
 
 /* Title */
 .projectItem h2 {
   font-size: 22px;
   font-family: var(--headlines);
+  color: #e6e6f2;
   margin-bottom: 10px;
 }
 
 /* Description */
 .projectItem p {
   font-size: 14px;
-  color: rgb(var(--accent));
+  color: #c5c6e8;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -212,40 +216,49 @@ nav ul li:hover {
 }
 
 .techItem {
-  background: var(--hover-background);
+  background: #7c83db;
   font-size: 12px;
   padding: 5px 10px;
   border-radius: 20px;
   font-weight: bold;
+  color: #1f2235;
 }
 
 /* Visit Button */
 .visitButton {
   display: inline-block;
   font-weight: bold;
-  transition: background 0.3s ease;
+  background: #7c83db;
+  color: #1f2235;
+  border: 1px solid #b2b3ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   margin: 0.4rem;
+  box-shadow: 2px 2px 0px #b2b3ff;
 }
 
 .visitButton:hover {
-  background: #73957f;
+  background: #a3a8f5;
+  box-shadow: 4px 4px 0px #b2b3ff;
 }
+
 
 /* Project Card */
 .details {
-  background: rgb(var(--background-end));
+  background-color: #23263ace;
   padding: 30px;
-  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
   width: 100%;
   display: flex;
   flex-direction: column;
+  border: solid 1px #6a74d9;
   gap: 20px;
+  color: var(--foreground);
 }
 
 /* Title Styling */
 .details h2 {
   font-size: 28px;
-  color: rgb(var(--highlight));
   font-family: var(--headlines);
   text-align: center;
   text-transform: uppercase;
@@ -253,12 +266,11 @@ nav ul li:hover {
   margin-bottom: 15px;
 }
 
-/* Logo Centered */
+/* logo Centered */
 .details > img {
   display: block;
   margin: 0 auto;
   border-radius: 12px;
-  box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Company Info Section */
@@ -267,7 +279,6 @@ nav ul li:hover {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
-  background: rgba(var(--accent), 0.2);
   border-radius: 10px;
 }
 
@@ -283,7 +294,7 @@ nav ul li:hover {
 /* Process Sections */
 
 .step4 {
-  background-color: var(--background-start);
+  background-color: var(--foreground);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -330,7 +341,6 @@ nav ul li:hover {
 
 .details ol li {
   font-size: 16px;
-  color: rgb(var(--foreground));
   border-radius: 8px;
   list-style: none;
   display: flex;
@@ -395,4 +405,12 @@ figcaption {
 .btn-secondary:hover {
   color: var(--background-start);
   background-color: var(--foreground);
+}
+
+@media (min-width: 768px){
+  
+  html{
+    margin: 0 4rem;
+  }
+
 }
