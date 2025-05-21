@@ -4,12 +4,13 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="flex justify-center mx-4 border border-[#5b6bc0] main text-[#e6e6f2]">
-      <div className="mx-5 w-full max-w-5xl py-10">
+      <div className="mx-5 w-full max-w-6xl py-10">
         <div className="border-4 border-[#5b6bc0] bg-[#23263a] bg-[url('/images/hero.png')] bg-cover bg-center p-6 shadow-[0_0_6px_#5b6bc0] rounded-lg">
           <div className="flex">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#8c8edf] welcome-msg">
-              Welcome!
+            <h2 className="text-[64px] leading-none font-extrabold text-[#8c8edf] tracking-tighter uppercase border-b-2 border-[#5b6bc0] welcome-msg">
+              Welcome!{" "}
             </h2>
+
             <Image
               src="/images/perso.png"
               height={64}
@@ -29,10 +30,6 @@ export default function Hero() {
               Contact Me
             </button>
           </div>
-        </div>
-
-        <div className="mt-10 text-center text-[#5b6bc0] text-sm font-mono">
-          ｡⋆ৎ୭⋆｡
         </div>
 
         {/* Services Grid */}

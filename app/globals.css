@@ -53,10 +53,11 @@ h3 {
 }
 
 .welcome-msg {
-  display: inline-block;
-  padding: 1rem;
-  background-color: #2b2724;
-  border-radius: 0.5rem;
+  text-shadow:
+      -1px -1px 0 #23263a,
+      1px -1px 0 #23263a,
+      -1px 1px 0 #23263a,
+      1px 1px 0 #23263a;
 }
 
 nav ul li {
@@ -143,7 +144,7 @@ nav ul li:hover {
 
 /* dev page */
 .filter-dev {
-  background-color: #1f2235; /* dark blue background */
+  background-color: #1f2235;
   padding: 0.5rem;
 }
 
