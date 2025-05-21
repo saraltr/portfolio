@@ -1,7 +1,7 @@
 # 🎨 Web Design & Development Portfolio
 
 Welcome to my personal portfolio!  
-This project showcases a selection of my work as a web developer — highlighting projects that explore UI/UX, visual design, and creative coding, alongside practical applications of HTML, CSS, JavaScript, TypeScript, React, Next.js, Blazor, Node.js, and REST/GraphQL APIs.
+This project showcases a selection of my work as a web developer, highlighting projects that explore UI/UX, and visual design, alongside practical applications of HTML, CSS, JavaScript, TypeScript, React, Next.js, Blazor, Node.js, and REST/GraphQL APIs.
 
 ## ✨ Overview
 
